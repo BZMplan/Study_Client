@@ -1,9 +1,9 @@
 package com.mplan;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseWheelListener;
-public class JF<ActionEvent> extends JFrame {
+import java.awt.event.*;
+
+public class JF extends JFrame {
 
     public JF(){
         setTitle("这是一个窗体");
@@ -22,16 +22,13 @@ public class JF<ActionEvent> extends JFrame {
         c.validate();//验证容器中的组件
         c.setLayout(new FlowLayout());
 
-        JB.addActionListener(new ActionListener() {
+        JB.addActionListener(new ActionListener(){
+            @Override
             public void actionPerformed(ActionEvent e){
                 new JD();
             }
         });
-            
-
-        System.out.print("x="+getX()+"y="+getY());
     }
-
     public static void main(String[] args) {
         new JF();
     }
