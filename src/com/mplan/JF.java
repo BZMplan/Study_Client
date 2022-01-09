@@ -5,7 +5,9 @@ import java.awt.event.*;
 
 public class JF extends JFrame {
 
-    public JF(){
+    public JF(JFrame frame){
+
+        super();
         setTitle("这是一个窗体");
         setVisible(true);//设置窗体可见
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// DISPOSE_ON_CLOSE 释放资源
