@@ -1,6 +1,5 @@
 package com.mplan;
 
-import javax.swing.JDialog;
 import javax.swing.*;
 
 import java.awt.*;
