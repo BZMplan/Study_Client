@@ -9,6 +9,7 @@ public class JD extends JDialog{
         c.add(new JLabel("这是一个对话框"));
         setVisible(true);
         setBounds(600,400,100,100);
+        //这是一个测试
     }
     
     
