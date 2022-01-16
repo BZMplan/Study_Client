@@ -8,7 +8,7 @@ public class JF extends JFrame {
     public JF(){
         setTitle("这是一个窗体");
         setVisible(true);//设置窗体可见
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// DISPOSE_ON_CLOSE 释放资源
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);// DISPOSE_ON_CLOSE 释放资源
         setBounds(600,400,400,400);//设置窗体坐标和大小，像素
         setResizable(false);
 
@@ -25,7 +25,7 @@ public class JF extends JFrame {
         JB.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                new JD();
+                new JD(null);
             }
         });
     }
