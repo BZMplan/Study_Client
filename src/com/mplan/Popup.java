@@ -5,9 +5,8 @@ import javax.swing.*;
 
 import java.awt.*;
 public class Popup extends JDialog{
-    public Popup(JFrame frame){
+    public Popup(JFrame frame,String string){
         super(frame,"标题",true);
-
         //设置窗体的图标
         String path = "img/icon.png";
         try {
@@ -18,12 +17,12 @@ public class Popup extends JDialog{
             //TODO: handle exception
         }
 
+        JLabel lable_Popup = new JLabel("文字是:"+ string);
         Container c = getContentPane();
-        c.add(new JLabel("这是一个对话框"));
+        c.add(lable_Popup);
+        c.setLayout(new FlowLayout());
         setResizable(false);
         setBounds(600,400,200,200);
-
-
 
         setVisible(true);
         
