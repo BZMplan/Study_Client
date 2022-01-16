@@ -16,7 +16,6 @@ public class Mform extends JFrame {
             this.setIconImage(img);
         } catch (Exception e) {
             System.out.println(e);
-            //TODO: handle exception
         }
 
         
@@ -26,12 +25,12 @@ public class Mform extends JFrame {
         setBounds(600,400,400,400);//设置窗体坐标和大小，像素
         setResizable(false);
         
-        JLabel l = new JLabel("这是一个窗体");
+        JLabel lable = new JLabel("这是一个窗体");
         JButton butter_Popup = new JButton("按钮");
 
         Container c = getContentPane();
         c .setBackground(Color.WHITE);//设置背景颜色
-        c.add(l);//添加组件
+        c.add(lable);//添加组件
         c.add(butter_Popup);
         c.validate();//验证容器中的组件
         c.setLayout(new FlowLayout());
