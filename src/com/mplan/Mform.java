@@ -1,12 +1,8 @@
 package com.mplan;
+
 import javax.imageio.ImageIO;
-import javax.security.auth.callback.TextInputCallback;
 import javax.swing.*;
-import javax.swing.FocusManager;
-import javax.swing.event.EventListenerList;
-
-import org.w3c.dom.events.MouseEvent;
-
+import com.mplan.function.hidenText;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -30,24 +26,39 @@ public class Mform extends JFrame {
         setBounds(600,400,600,400);//设置窗体坐标和大小，像素
         setResizable(false);
         
-        JLabel lable = new JLabel("这是一个窗体");
-        JButton butter_Popup = new JButton("按钮");
-        JTextField text_Field = new JTextField(16);
+        JLabel lable = new JLabel("这是一个窗体"); //设置一个文本标签
+        JButton butter_Popup = new JButton("按钮"); //设置按钮
+        JTextField text_Field= new JTextField(16); //设置输入文本框
+        // JTextField text_Field_2 = new JTextField(16);
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
         c .setBackground(Color.WHITE);//设置背景颜色
         c.add(lable);//添加组件
         c.add(butter_Popup);
         c.add(text_Field);
+        // c.add(text_Field_2);
         
         butter_Popup.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+                String temp = text_Field.getText();
+                // String temp2 = text_Field_2.getText();
                 String string = text_Field.getText();
-                System.out.println(string);
-                new Popup(null,string);
+                // String string2 = text_Field_2.getText();
+              
+                if(temp.equals("请输入一段文字")){
+                    new Popup(null, "请重新输入");
+                }else{
+                    new Popup(null, string);
+                    System.out.println(string);
+                    // new Popup(null,string,string2);
+
+                }
+                
             }
         });
+        text_Field.addFocusListener(new hidenText(text_Field, "请输入一段文字"));
+        // text_Field_2.addFocusListener(new hidenText(text_Field_2, "请输入一段文字"));
         //验证容器中的组件
         c.validate();
     }
