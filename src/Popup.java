@@ -1,4 +1,3 @@
-package com.mplan;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

@@ -1,8 +1,6 @@
-package com.mplan;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import com.mplan.function.hidenText;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
