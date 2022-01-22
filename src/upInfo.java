@@ -9,7 +9,6 @@ import java.net.UnknownHostException;
 public class upInfo {
     public upInfo(String ip,int port,String string) throws UnknownHostException, IOException{
         Socket clientSocket =new Socket(ip,port);
-
         OutputStream os = clientSocket.getOutputStream();
         PrintWriter pw = new PrintWriter(os);
         pw.write(string);

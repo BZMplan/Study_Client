@@ -19,6 +19,7 @@ public class Popup extends JDialog{
             System.out.println(e);
             //TODO: handle exception
         }
+        //调用upInfo()方法，向服务器提交信息
         new upInfo(ip,port,string);
         JLabel lable_Popup = new JLabel("你向服务器发送的信息是："+ string);
         Container c = getContentPane();

@@ -8,7 +8,7 @@ import org.json.JSONObject;
 public class start {
     public static void main(String[] args) throws IOException {
         //获取json文件中的数据
-        File file=new File("src/rec/setting.json");
+        File file=new File("src/setting.json");
         String content= FileUtils.readFileToString(file,"UTF-8");
         JSONObject jsonFile=new JSONObject(content);
         //定义ip与端口
