@@ -35,6 +35,9 @@ public class hidenText implements FocusListener {
         if(temp.equals("")){
             jTextField.setForeground(Color.GRAY);
             jTextField.setText(hidenText);
+            
+             
+            
         }
         
     }
