@@ -5,16 +5,19 @@ import javax.swing.*;
 import com.mplan.function.hidenText;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.UnknownHostException;
 
 public class Mform extends JFrame {
 
 
-    public Mform(){
+    public Mform(String ip,int port){
         
         //设置窗体的图标
         String path = "img/icon.png";
         try {
-            Image img = ImageIO.read(this.getClass().getResource(path));
+            BufferedImage img = ImageIO.read(this.getClass().getResource(path));
             this.setIconImage(img);
         } catch (Exception e) {
             System.out.println(e);
@@ -47,12 +50,18 @@ public class Mform extends JFrame {
                 // String string2 = text_Field_2.getText();
               
                 if(temp.equals("请输入一段文字")){
-                    new Popup(null, "请重新输入");
+                    new ErrorPopUp(null,"请重新输入");
                 }else{
-                    new Popup(null, string);
-                    System.out.println(string);
+                    try {
+                        new upInfo(ip,port,string);
+                    } catch (UnknownHostException e1) {
+                        // TODO Auto-generated catch block
+                        e1.printStackTrace();
+                    } catch (IOException e1) {
+                        // TODO Auto-generated catch block
+                        e1.printStackTrace();
+                    }
                     // new Popup(null,string,string2);
-
                 }
                 
             }

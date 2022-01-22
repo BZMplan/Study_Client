@@ -1,4 +1,9 @@
 {
     "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "bin"
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\15249\\Desktop\\commons-io-2.11.0.jar",
+        "c:\\Users\\15249\\Desktop\\json-20211205.jar"
+    ]
 }
