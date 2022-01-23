@@ -9,7 +9,6 @@ import java.net.UnknownHostException;
 
 public class Mform extends JFrame {
 
-
     public Mform(String ip,int port){
         
         //设置窗体的图标
@@ -39,6 +38,7 @@ public class Mform extends JFrame {
         c.add(text_Field);
         // c.add(text_Field_2);
         
+        //当点击按钮时，进行数据传输
         butter_Popup.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
