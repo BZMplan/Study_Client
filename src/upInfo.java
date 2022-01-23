@@ -11,7 +11,7 @@ public class upInfo {
     public upInfo(String ip,int port,String string) throws UnknownHostException, IOException{
         Socket clientSocket =new Socket(ip,port);
         DataOutputStream out = new DataOutputStream(clientSocket.getOutputStream());
-        out.writeUTF(string);
+        out.write(string.getBytes());
         out.flush();
         clientSocket.close();
     }
