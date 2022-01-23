@@ -1,11 +1,6 @@
-
-
 import java.awt.Color;
 import java.awt.event.*;
-
 import javax.swing.JTextField;
-
-
 public class hidenText implements FocusListener {
     private String hidenText;
     private JTextField jTextField;

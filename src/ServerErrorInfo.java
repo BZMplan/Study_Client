@@ -3,8 +3,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class ErrorPopUp extends JDialog{
-    public ErrorPopUp(JFrame frame,String string){
+public class ServerErrorInfo extends JDialog{
+    public ServerErrorInfo(JFrame frame,String string){
         super(frame,"错误",true);
         String path = "img/icon.png";
         try {

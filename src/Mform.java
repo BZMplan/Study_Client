@@ -43,23 +43,18 @@ public class Mform extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 String temp = text_Field.getText();
-                // String temp2 = text_Field_2.getText();
                 String string = text_Field.getText();
-                // String string2 = text_Field_2.getText();
-              
+
                 if(temp.equals("请输入一段文字")){
                     new ErrorPopUp(null,"请重新输入");
                 }else{
                     try {
-                        new upInfo(ip,port,string);
+                        new Popup(null, string, ip, port);
                     } catch (UnknownHostException e1) {
-                        // TODO Auto-generated catch block
                         e1.printStackTrace();
                     } catch (IOException e1) {
-                        // TODO Auto-generated catch block
                         e1.printStackTrace();
                     }
-                    // new Popup(null,string,string2);
                 }
                 
             }
