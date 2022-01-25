@@ -4,6 +4,7 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "c:\\Users\\15249\\Desktop\\commons-io-2.11.0.jar",
-        "c:\\Users\\15249\\Desktop\\json-20211205.jar"
+        "c:\\Users\\15249\\Desktop\\json-20211205.jar",
+        "d:\\mysql-connector-java-5.1.49.jar"
     ]
 }

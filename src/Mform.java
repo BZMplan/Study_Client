@@ -27,8 +27,9 @@ public class Mform extends JFrame {
         setResizable(false);
         
         JLabel lable = new JLabel("这是一个窗体"); //设置一个文本标签
-        JButton butter_Popup = new JButton("按钮"); //设置按钮
+        JButton butter_Popup = new JButton("发送信息"); //设置按钮
         JTextField text_Field= new JTextField(16); //设置输入文本框
+        JButton getMsgButton = new JButton("获取信息");
         // JTextField text_Field_2 = new JTextField(16);
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
@@ -36,6 +37,7 @@ public class Mform extends JFrame {
         c.add(lable);//添加组件
         c.add(butter_Popup);
         c.add(text_Field);
+        c.add(getMsgButton);
         // c.add(text_Field_2);
         
         //当点击按钮时，进行数据传输
@@ -59,6 +61,15 @@ public class Mform extends JFrame {
                 
             }
         });
+
+        getMsgButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                new getMsg();
+            }
+        });
+
+
         text_Field.addFocusListener(new hidenText(text_Field, "请输入一段文字"));
         // text_Field_2.addFocusListener(new hidenText(text_Field_2, "请输入一段文字"));
         //验证容器中的组件
